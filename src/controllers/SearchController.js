@@ -12,7 +12,7 @@ module.exports = {
                 $in: techsArray
             },
             location: {
-                $hear: {
+                $near: {
                     $geometry: {
                         type: 'Point',
                         coordinates: [longitude, latitude],
@@ -21,6 +21,6 @@ module.exports = {
                 }
             }
         })
-        return response.json({dev: []})
+        return response.json({dev: devs})
     }
 }
